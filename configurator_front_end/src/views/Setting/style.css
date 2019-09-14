@@ -1,0 +1,34 @@
+.setting-container{
+
+    margin: 0px 24px ;
+    padding: 0px 12px;
+}
+.setting-group{
+    display: flex;
+    flex-flow: row wrap;
+     background-color: #212b3e;
+    padding: 18px;
+    margin-bottom: 6px;
+}
+.setting-list{
+    height: 70vh;
+    padding:24px;
+     overflow-y: scroll;
+     background-color: #212b3e;
+
+}
+.setting-area{
+
+}
+.line-break {
+  width: 100%;
+}
+.setting-time{
+    padding: 4px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+}
