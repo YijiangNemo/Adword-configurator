@@ -1,0 +1,34 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "testadmin",
+    "database": "database_development",
+    "host": "database-1.ccvqewn2idhp.ap-southeast-2.rds.amazonaws.com",
+    "dialect": "mysql",
+
+    "operatorsAliases": false
+
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "0.0.0.0",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "socketPath": "/var/run/mysqld/mysqld.sock"
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "database_production",
+    "host": "0.0.0.0",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "socketPath": "/var/run/mysqld/mysqld.sock"
+    }
+  }
+}

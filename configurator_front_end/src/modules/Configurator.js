@@ -69,7 +69,7 @@ class Configurator extends Component {
     }
 
     render() {
-        console.log({keywords:this.state.keywords,timeSetting:this.state.timeSetting,sites:this.state.sites})
+        // console.log({keywords:this.state.keywords,timeSetting:this.state.timeSetting,sites:this.state.sites})
         return (
             <div className={'container'}>
 
@@ -109,7 +109,7 @@ class Configurator extends Component {
                         <Mutation mutation={add_data} variables={{id:parseInt (this.state.id),data:{keywords:this.state.keywords,timeSetting:this.state.timeSetting,sites:this.state.sites}}}>
 
        {(addTodo, { loading, error, data }) => {
-        console.log({ loading, error, data })
+        // console.log({ loading, error, data })
            if (loading) return <div>Loading...</div>;
            if (error) return <div>Error :(</div>;
 

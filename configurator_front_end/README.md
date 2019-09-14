@@ -1,6 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Code Structure
+To make this project more scalable, flexible and can be gracefully modified when needed, 
+I decompose the structure into 4 level(from top to bottom): `Application`, `Modules`, `Views`, `Components`.
 
-## Available Scripts
+#### Application
+Use Router to control the different pages(`Table` and `ConfiguratorPage`) with GraphQL Apollo `<Query>` to fetch the data and render with `Modules`
+pass the setting JSON data as a props to `Configurator` module.
+
+#### Module
+Including Class Component `<Configurator/>`. For `<Configurator/>`, use `<Mutation>` to save the setting data.
+and `<Query>` to dynamic render the view(`Views` and `Components` level). 
+
+#### Views
+I decompose the module into `<List/>` and `<Setting/>` are 2 view level component according to 
+the area and different type of UI. Use a callback function `getData(data)` to pass the
+setting to previous level.
+
+#### Components
+`Button` `Checkbox` `Textfield` are the basic element for the UI, use stateless
+Function Component to make it easier to modify or replace.
+
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -37,32 +57,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
